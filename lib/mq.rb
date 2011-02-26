@@ -855,7 +855,9 @@ class MQ
         # be an empty string, then AMQP broker generated a random one.
         queues = self.queues.select { |queue| queue.opts[:nowait].eql?(false) }
         queue  = queues.reverse.find { |queue| queue.status.eql?(:unfinished) }
-        queue.receive_status method
+        if queue
+          queue.receive_status method
+        end
 
       when Protocol::Queue::BindOk
         # We can't use queues[method.queue] because if the name would
