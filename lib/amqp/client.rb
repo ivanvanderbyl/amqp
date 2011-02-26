@@ -31,6 +31,7 @@ module AMQP
                                                  'en_US')
 
         when Protocol::Connection::Tune
+          
           send Protocol::Connection::TuneOk.new(:channel_max => 0,
                                                 :frame_max => 131072,
                                                 :heartbeat => @settings[:heartbeat] || 0)
@@ -108,6 +109,7 @@ module AMQP
       @last_server_heartbeat = Time.now
 
       @timer ||= EM::PeriodicTimer.new(@settings[:heartbeat]) do
+        puts "Heartbeat"
         if connected?
           if @last_server_heartbeat < (Time.now - (@settings[:heartbeat] * 2))
             log "Reconnecting due to missing server heartbeats"
