@@ -109,7 +109,6 @@ module AMQP
       @last_server_heartbeat = Time.now
 
       @timer ||= EM::PeriodicTimer.new(@settings[:heartbeat]) do
-        puts "Heartbeat"
         if connected?
           if @last_server_heartbeat < (Time.now - (@settings[:heartbeat] * 2))
             log "Reconnecting due to missing server heartbeats"
