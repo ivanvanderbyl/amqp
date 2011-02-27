@@ -1,3 +1,4 @@
+require "base64"
 Gem::Specification.new do |s|
   s.name        = 'ivanvanderbyl-amqp'
   s.version     = File.open('VERSION').read.strip
