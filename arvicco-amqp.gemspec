@@ -1,12 +1,12 @@
 Gem::Specification.new do |s|
-  s.name        = 'arvicco-amqp'
+  s.name        = 'ivanvanderbyl-amqp'
   s.version     = File.open('VERSION').read.strip
   s.date        = Time.now.strftime "%Y-%m-%d"
-  s.summary     = 'Fork of original tmm1/amqp with some tweaks.'
-  s.description = "An implementation of the AMQP protocol in Ruby/EventMachine. Fork of original tmm1/amqp with improvements (see README)."
-  s.email       = "arvitallian@gmail.com"
-  s.authors     = ["Aman Gupta", "Arvicco"]
-  s.homepage    = "http://github.com/arvicco/amqp"
+  s.summary     = 'Fork of original ruby-amqp/amqp with some tweaks.'
+  s.description = "An implementation of the AMQP protocol in Ruby/EventMachine. Fork of original ruby-amqp/amqp 0.6.13 with heartbeat support"
+  s.email       = Base64.decode64("aXZhbnZhbmRlcmJ5bEBtZS5jb20=")
+  s.authors     = ["Aman Gupta", "Arvicco", "Ivan Vanderbyl"]
+  s.homepage    = "http://github.com/ivanvanderbyl/amqp"
   s.platform    = Gem::Platform::RUBY
 
   # Docs setup

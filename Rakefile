@@ -10,7 +10,7 @@ $LOAD_PATH.unshift LIB_PATH.to_s unless $LOAD_PATH.include? LIB_PATH.to_s
 
 require 'amqp/version'
 
-NAME = 'arvicco-amqp'
+NAME = 'ivanvanderbyl-amqp'
 CLASS_NAME = AMQP
 VERSION = CLASS_NAME::VERSION
 
